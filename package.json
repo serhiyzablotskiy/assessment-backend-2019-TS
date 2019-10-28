@@ -1,0 +1,41 @@
+{
+  "name": "assignment-backend-2019",
+  "version": "0.0.1",
+  "main": "dist/server.js",
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc && ncp src/graphql/schema.graphql dist/graphql/schema.graphql",
+    "prestart": "npm run build",
+    "start": "nodemon .",
+    "test": "jest"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/compression": "^1.0.1",
+    "@types/config": "0.0.35",
+    "@types/express": "^4.17.1",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-depth-limit": "^1.1.2",
+    "@types/mongodb": "^3.3.6",
+    "@types/mongoose": "^5.5.23",
+    "@types/node": "^12.11.7",
+    "apollo-server-express": "^2.5.0",
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "graphql": "^14.3.1",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-import": "^0.7.1",
+    "graphql-import-node": "0.0.4",
+    "graphql-tools": "^4.0.6",
+    "js-yaml": "^3.13.1",
+    "mongoose": "^5.5.11",
+    "ncp": "^2.0.0",
+    "nodemon": "^1.19.1",
+    "qs-middleware": "^1.0.3",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
